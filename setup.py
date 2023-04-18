@@ -31,6 +31,7 @@ setuptools.setup(
     url="https://github.com/kunaldahiya/xclib",
     install_requires=['numpy', 'nmslib', 'scikit-learn', 'numba', 'fasttext'],
     packages=setuptools.find_packages(),
+    setup_requires = ['cython'],
     # package_data={'xclib': ["classifier/so/*.so"]},
     ext_modules=cythonize(extensions),
     include_package_data=True,
